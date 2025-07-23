@@ -1,4 +1,3 @@
-let array = [1,2,8,6,7,8,3,9,10];
 function secondLargestFunction(array){
     if(array.length < 2){
         return null;
@@ -18,5 +17,24 @@ function secondLargestFunction(array){
 }
 // do same for second smallest number
 
+function secondSmallestFunction (array){
+    if(array.length < 2){
+        return null;
+    }
+    let smallest = Infinity;
+    let secondSmallest = Infinity;
+    for(let i = 0; i < array.length; i++){
+        if(array[i] < smallest){
+            secondSmallest = smallest;
+            smallest = array[i];
+        }else if(array[i] > smallest && array[i] < secondSmallest){
+            secondSmallest = array[i];
+        }
+    }
+    return secondSmallest;
+}
+let array = [11,2,8,3,9,10];
 let secondLargestValue = secondLargestFunction(array);
-console.log(secondLargestValue);
+let secondSmallestValue = secondSmallestFunction(array);
+
+console.log(secondLargestValue,secondSmallestValue);
