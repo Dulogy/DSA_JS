@@ -15,7 +15,6 @@ function secondLargestFunction(array){
     }
     return secondLargestNum;
 }
-// do same for second smallest number
 
 function secondSmallestFunction (array){
     if(array.length < 2){
