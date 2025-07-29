@@ -1,10 +1,10 @@
 function lower(arr,x){
     let start = 0;
-    let end = arr.length;
+    let end = arr.length -1 ;
     let ans = end;
     while( start<= end){
         
-        let mid = Math.floor(start + end)/2;
+        let mid = Math.floor((start + end)/2);
         if(arr[mid] >= x ){
             ans = mid;
             end = mid-1;
